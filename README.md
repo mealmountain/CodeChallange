@@ -16,10 +16,7 @@ Prerequisites:
 
 - Knowledge of relational databases, including how to create tables, insert data, and query data. For the purpose of this test, we are using MSSQL.
 
-Database Server: SQL-DE-TEST-D
-        * Database Name: CodeChallenge
-        * User Name: candidate
-        * pass: c4nd1d4t3
+Database Server: Use your local database server like MSSql Server Express, MySql, Postgress,...
 
 - Knowledge of a programming language, including how to read and write files, process data, and access a MSSQL database. In our environment we use Python3, however, feel free to choose any of them. 
 
@@ -29,7 +26,7 @@ We have included example data and programme code. The example schema creates a s
 
 ## Background
 
-We have provided an internal Gitlab repo containing:
+We have provided an internal Github repo containing:
 
 1. An example_table.sql file containing a table schema used by the example scripts.
 
@@ -49,12 +46,8 @@ There are a sequence of steps that we would like you to complete. We hope this w
 
 1.	Clone the git repo to your local computer and createa new branch with your name.
 
-2.	Devise a database schema to hold the data in the people and places CSV files, and apply it to the MSSQL database. You may apply this schema via a script, via the MSSQL command-line client, or via a GUI client SSMS.
+2.	Devise a database schema to hold the data in the people and places CSV files, and apply it to the MSSQL database. You may apply this schema via a script, via the SQL command-line client, or via a GUI client.
 
-        * Database Server: SQL-DE-TEST-D
-        * Database Name: CodeChallenge
-        * User Name: candidate
-        * pass: c4nd1d4t3
 
 3.	Create a simple script for loading the CSV files, places.csv and people.csv, into the tables you have created in the database. Your data ingest process can be implemented in any way that you like. You may implement this via programme code in a language of your choice, or via the use of ETL tools.
 
@@ -97,12 +90,3 @@ We will spend 40 minutes at your interview pairing with you. This will include:
 
 - Modifying your output code, to add several new output files containing different subsets of the data. Be prepared to make different queries of the database, to manipulate data in your programme code, and to output data to disk as JSON and CSV files.
 
-## Note 
-
-By security reasons, our infraestructure use a proxy server, so if you choose Python as programming language you should use this way to install new packages: 
-
-pip install -r ./requirements/requirements_local.txt \
-                    --proxy http://proxy:8080 \
-                    --trusted-host=pypi.org \ 
-                    --trusted-host=files.pythonhosted.org 
-                    --no-cache-dir --index-url https://artifactory.controlexpert.com/artifactory/api/pypi/pypi-all/simple
