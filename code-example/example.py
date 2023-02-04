@@ -5,8 +5,8 @@ import json
 import pymssql
 
 # connect to the database
-connection = pymssql.connect(server='SQL-DE-TEST-D.langenfeld.controlexpert.firm', user='candidate',
-                             password='c4nd1d4t3', database='CodeChallenge')
+connection = pymssql.connect(server='MyDatabaseServer', user='myDatabaseUser',
+                             password='my5tr0n6pw4', database='MyDatabaseName')
 
 cursor = connection.cursor()
 
@@ -22,8 +22,8 @@ connection.close()
 
 
 # connect to the database
-connection = pymssql.connect(server='SQL-DE-TEST-D.langenfeld.controlexpert.firm', user='candidate',
-                             password='c4nd1d4t3', database='CodeChallenge')
+connection = pymssql.connect(server='MyDatabaseServer', user='myDatabaseUser',
+                             password='my5tr0n6pw4', database='MyDatabaseName')
 
 cursor = connection.cursor()
 
