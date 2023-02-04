@@ -1,0 +1,16 @@
+USE [CodeChallenge]
+GO
+
+IF OBJECT_ID(N'dbo.example', N'U') IS NOT NULL  
+   DROP TABLE [dbo].[example];  
+GO
+
+CREATE TABLE [dbo].[example](
+	[id] [smallint] IDENTITY(1,1) NOT NULL,
+	[name] [nchar](100) NOT NULL,
+ CONSTRAINT [PK_example] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
